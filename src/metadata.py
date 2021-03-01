@@ -59,7 +59,7 @@ def mediaIdentifier(
 ):
     if movie:
         search_url = (
-            "https://api.themoviedb.org/3/search/movie?api_key=%s&query=%s&year=%s"
+            "https://api.themoviedb.org/3/search/movie?api_key=%s&query=%s&year=%s&language=es-Mx"
             % (tmdb_api_key, title, year)
         )
         search_content = json.loads((requests.get(search_url)).content)
@@ -104,7 +104,7 @@ def mediaIdentifier(
         )
     elif tv:
         search_url = (
-            "https://api.themoviedb.org/3/search/tv?api_key=%s&query=%s&first_air_date_year=%s"
+            "https://api.themoviedb.org/3/search/tv?api_key=%s&query=%s&first_air_date_year=%s&language=es-Mx"
             % (tmdb_api_key, title, year)
         )
         search_content = json.loads((requests.get(search_url)).content)
